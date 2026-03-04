@@ -13,7 +13,9 @@ mongoose.connect(process.env.MONGO_URI)
 .then(()=>console.log("MongoDB Connected"))
 .catch(err=>console.log(err))
 
-app.use("/api/orders", require("./routes/orderRoutes"))
+app.use("/api/pesanan", require("./routes/orderRoutes"))
 app.use("/api/admin", require("./routes/adminRoutes"))
 
-app.listen(5000, ()=>console.log("Server running on port 5000"))
+app.listen(5000, () => {
+  console.log("Server berjalan di port 5000")
+})
